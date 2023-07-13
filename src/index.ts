@@ -1,14 +1,21 @@
-import { Hero } from "./classes/Hero";
-// import { Hero as SuperHero} from "./classes/Hero";
-// import * as HeroClasses from "./classes/Hero";
+import { Hero } from "./interfaces/heroes";
+import { genericFunction, genericFunctionArrow, printObject } from "./generics/generics";
+import { Villain } from "./interfaces/villain";
 
-// const ironman = new SuperHero.Hero('Ironman', 1, 55)
-const ironman = new Hero('Ironman', 1, 55)
+// printObject( 123 );
+// printObject( new Date() );
+// printObject( {a: 1} );
+// printObject( 'Hola Mundo' );
 
-console.log( ironman );
-console.log( ironman.power)
+// console.log( genericFunction( 3.1416 ).toFixed(2) )
+// console.log( genericFunctionArrow( 'Hola mundo' ).split(' ') )
 
+const deadpool = {
+    name: 'Deadpool',
+    realName: 'Wade Wilson',
+    dangerLevel: 132
+}
 
-
+console.log ( genericFunctionArrow<Villain>( deadpool).dangerLevel )
 
 
